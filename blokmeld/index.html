@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lucida|Open+Sans" />
+    <title>BlokMeld</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html"><img src="/img/pclogo.png" height="30" width="30" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#PuzzleConnectionNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="PuzzleConnectionNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-cubes fa-lg"></i>
+                            BlokMeld</a>
+                    </li>
+                </ul>
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                        <i class="fa fa-sign-in"></i> Login
+                    </a>
+            </div>
+        </div>
+    </nav>
+    <!-- for desktop, title bar with score and time. level select on the left. game board in the center. pieces on the right. 
+         for mobile, score and time on top, level select in the menu, game board in the middle, pieces on the bottom.-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center">
+                <h4>BlokMeld</h4>
+            </div>
+        </div>
+        <div class="row" id="scoreBoard">
+            <div class="col" id="level">
+                <h2>Level: 1</h2>
+            </div>
+            <div class="col" id="score">
+                <h2>Score: 0</h2>
+            </div>
+            <div class="col" id="time">
+                <h2>Time: 0:00</h2>
+            </div>
+        </div>
+        <div class="row" id="gameArea">
+            <div class="col-12 col-md-3">
+                <div class="btn-group btn-group-lg d-none d-md-block" role="group">
+                    <div class="btn-group-vertical" role="group">
+                        <button type="button" class="btn btn-secondary">Level 1</button>
+                        <button type="button" class="btn btn-secondary">Level 2</button>
+                        <button type="button" class="btn btn-secondary">Level 3</button>
+                        <button type="button" class="btn btn-secondary">Level 4</button>
+                        <button type="button" class="btn btn-secondary">Level 5</button>
+                        <button type="button" class="btn btn-secondary">Level 6</button>
+                        <button type="button" class="btn btn-secondary">Level 7</button>
+                        <button type="button" class="btn btn-secondary">Level 8</button>
+                        <button type="button" class="btn btn-secondary">Level 9</button>
+                        <button type="button" class="btn btn-secondary">Level 10</button>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-lg d-md-none" role="group">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-secondary">Level 1</button>
+                        <button type="button" class="btn btn-secondary">Level 2</button>
+                        <button type="button" class="btn btn-secondary">Level 3</button>
+                        <button type="button" class="btn btn-secondary">Level 4</button>
+                        <button type="button" class="btn btn-secondary">Level 5</button>
+                        <button type="button" class="btn btn-secondary">Level 6</button>
+                        <button type="button" class="btn btn-secondary">Level 7</button>
+                        <button type="button" class="btn btn-secondary">Level 8</button>
+                        <button type="button" class="btn btn-secondary">Level 9</button>
+                        <button type="button" class="btn btn-secondary">Level 10</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col">
+                        <img src="/img/blokmeldlogo.png" class="img-fluid" style="width: 100%;" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Pieces</h1>
+                        <div id="gamePieces">
+                            <tr>
+                                <td class="puzzlePiece" id="1"><i class="fa fa-lg fa-square"></i></td><br>
+                                <td class="puzzlePiece" id="2"><i class="fa fa-lg fa-circle"></i></td><br>
+                                <td class="puzzlePiece" id="3"><i class="fa fa-lg fa-star"></i></td><br>
+                                <td class="puzzlePiece" id="3"><i class="fa fa-lg fa-heart"><br></i></td><br>
+                                <td class="puzzlePiece" id="5"><i class="fa fa-lg fa-diamond"></i><br></td>
+                            </tr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Login</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginEmail">Email address</label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail"
+                                        placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword"
+                                        placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label"> Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                    data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <!-- build:js js/main.js -->
+    <script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lucida|Open+Sans" />
+    <title>Puzzle Connection</title>
+</head>
+
+<body>
+
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <img src="img/pclogo.png" class="img-fluid" />
+                </div>
+                <div class="col">
+                    <h1>Puzzle Connection</h1>
+                    <h4>fun interactive puzzle games</h4>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/pclogo.png" height="30" width="30" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#PuzzleConnectionNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="PuzzleConnectionNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-info fa-lg"></i>
+                            About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blokmeld/index.html"><i class="fa fa-cubes fa-lg"></i> BlokMeld</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="mailto:dreamsofrebus@gmail.com"><i
+                                class="fa fa-address-card fa-lg"></i>
+                            Contact</a></li>
+                </ul>
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                        <i class="fa fa-sign-in"></i> Login
+                    </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="background-image: url('img/rebus.png'); background-size: 100% auto;">
+        <div class="row">
+            <div class="col">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">About</li>
+                </ol>
+                <h2 style="color: yellow; text-shadow: 1px 1px black;">About Us</h2>
+                <hr />
+            </div>
+        </div>
+
+        <div class="row row-content">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Rebus Dreams</h3>
+                        <p>Crafting experiences that are fun, interactive, and challenging. Rebus means picture puzzle, yet
+                            invokes one to Dream of what an image evokes rather than its literal depiction. We are puzzle
+                            enthusiasts who love to create artistic, self-evident experiences and share them with you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <blockquote class="blockquote card-body" style="background-color: transparent;">
+                        <p>nōn verbīs, sed rēbus</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content">
+            <div class="col">
+                <h3 style="color: yellow; text-shadow: 1px 1px black;">Our Games</h3>
+                <div id="accordion">
+                    <div class="card">
+                        <div role="tab" class="card-header">
+                            <h4>
+                                <a data-toggle="collapse" data-target="#blokmeld">
+                                    BlokMeld <small>Place blocks to make the puzzle whole</small>
+                                </a>
+                            </h4>
+                            <div class="collapse show" id="blokmeld" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="d-none d-sm-block">Inspired by polyominoes. Created by you.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div role="tab" class="card-header">
+                            <h4>
+                                <a data-toggle="collapse" data-target="#mpblokmeld">
+                                    Multiplayer BlokMeld <small><i>Coming Soon!</i> Play online with friends!</small>
+                                </a>
+                            </h4>
+                            <div class="collapse" id="mpblokmeld" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="d-none d-sm-block">Inspired by tabletop block games. Compete with friends!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2 offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="blokmeld/index.html">BlokMeld</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                            class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
+                            class="fa fa-youtube"></i></a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <h5>Inquiries</h5>
+                    <!-- <a role="button" class="btn btn-link" href="#"><i class="fa fa-address-card"></i>
+                        message board coming soon</a><br /> -->
+                    <a role="button" class="btn btn-link" href="mailto:dreamsofrebus@gmail.com"><i
+                            class="fa fa-envelope-o"></i> dreamsofrebus@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <!-- build:js js/main.js -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>

@@ -93,14 +93,14 @@ function buildCol(col) {
 
 for (let i = 0; i < 10; i++) {
     let button = document.getElementById("level" + (i + 1));
-    
+
     if (typeof button !== 'undefined' && button !== null) {
         if (levels.length <= i) {
             button.classList.replace("btn-secondary", "btn-danger");
             button.addEventListener("click", function () {
                 alert("Level " + (i + 1) + " not available yet");
             });
-        } else{
+        } else {
             button.addEventListener("click", function () {
                 buildPieces(gameBoard, levels[i]);
                 buildPieces(gamePieces, pieces[i]);
